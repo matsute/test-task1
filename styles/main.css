@@ -1,0 +1,256 @@
+@import url(./fonts.css);
+@import url(./roots.css);
+
+#main {
+    background-color: var(--whiteGrey-color);
+    padding: 40px 10px 100px;
+}
+
+#main_list {
+    margin-bottom: 50px;
+}
+
+.main_list {
+    display: flex;
+    gap: 0 24px;
+
+    overflow-y: auto; 
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+}
+
+.main_list::-webkit-scrollbar {
+  display: none;
+}
+
+.main_list_block {
+    flex-shrink: 0;
+    cursor: pointer;
+    text-wrap: nowrap;
+    background-color: var(--white-color);
+    border-radius: 15px;
+    border: 1px solid var(--white-color);
+    padding: 8px 14px;
+
+    transition: all 0.5s;
+}
+
+.main_list_link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0 8px;
+}
+
+.main_list_block:hover {
+    border: 1px solid var(--orange-color);
+}
+
+.main_list_block:focus,
+.main_list_block:active {
+    background-color: var(--yellow-color);
+    border: 1px solid var(--white-color);
+}
+
+.main_list_name {
+    font: 400 16px/1.2 var(--main-font);
+}
+
+@media (max-width: 1024px) {
+    
+}
+
+@media (max-width: 768px) {
+    #main {
+        padding-top: 30px;
+    }
+    #main_list {
+        margin-bottom: 30px;
+    }
+    .main_list_block {
+        padding: 3px 8px;
+    }
+    .main_list {
+        gap: 0 12px;
+    }
+}
+
+@media (max-width: 420px) {
+    .main_list {
+        gap: 0 8px;
+    }
+}
+
+/*main_menu*/
+
+.main_menu {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 0 30px;
+}
+
+#main_basket {
+    max-width: 300px;
+    height: 109px;
+    background-color: var(--white-color);
+    border-radius: 8px;
+    margin-top: 71px;
+
+    padding: 24px 16px;
+}
+
+.main_basket_block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.main_basket_heading {
+    font: 600 24px/1 var(--main-font);
+}
+
+.main_basket_counter {
+    font: 400 12px/1.3 var(--main-font);
+    background-color: var(--whiteGrey-color);
+    border-radius: 8px;
+    padding: 2px 16px;
+}
+
+.main_basket_text {
+    font: 400 16px/1.3 var(--main-font);
+}
+
+/* main submenu*/
+
+.main_submenu_heading {
+    font: 600 40px/1.2 var(--main-font);
+    margin-bottom: 24px;
+}
+
+.main_submenu_list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.main_submenu_block {
+    background-color: var(--white-color);
+    padding: 12px;
+}
+
+.main_submenu_image {
+    width: 276px;
+    height: 220px;
+    margin-bottom: 16px;
+}
+
+.main_submenu_price {
+    font: 600 24px/1 var(--main-font);
+    margin-bottom: 8px;
+}
+
+.main_submenu_info {
+    font: 400 16px/1.3 var(--main-font);
+    margin-bottom: 29px;
+}
+
+.main_submenu_text {
+    font: 600 16px/1.3 var(--main-font);
+    color: var(--grey-color);
+    margin-bottom: 8px;
+}
+
+.main_submenu_button {
+    cursor: pointer;
+    font: 400 16px/1 var(--main-font);
+    text-align: center;
+    background-color: var(--whiteGrey-color);
+    border-radius: 8px;
+    padding: 12px 92px;
+    margin: 0 auto 12px;
+
+    transition: all .5s;
+}
+
+.main_submenu_button:hover {
+    background-color: var(--yellow-color);
+}
+
+@media (max-width: 1124px) {
+    .main_submenu_list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 868px) {
+    /* #main {
+        margin-bottom: 80px;
+    } */
+    .main_menu {
+        display: block;
+    }
+    #main_basket {
+        width: 145px;
+        height: 48px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 16px 10px;
+    }
+    .main_basket_block {
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .main_basket_heading {
+        font-size: 16px;
+    }
+    .main_basket_counter {
+        font-size: 10px;
+        padding: 1px 13px;
+    }
+    .main_basket_text {
+        display: none;
+    }
+    .main_submenu_heading {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    .main_submenu_list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+    .main_submenu_block {
+        width: 145px;
+        height: 243px;
+        padding: 4px;
+    }
+    .main_submenu_image {
+        width: 137px;
+        height: 120px;
+        margin-bottom: 10px;
+    }
+    .main_submenu_price {
+        font-size: 16px;
+        margin-bottom: 4px;
+    }
+    .main_submenu_info {
+        font-size: 12px;
+        margin-bottom: 16px;
+    }
+    .main_submenu_text {
+        font-size: 12px;
+        margin-bottom: 7px;
+    }
+    .main_submenu_button {
+        font-size: 12px;
+        padding: 9px 41px;
+    }
+}
+
+@media (max-width: 420px) {
+    #main_basket {
+        min-width: 100%;
+        height: auto;
+    }
+}
+

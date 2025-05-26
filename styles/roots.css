@@ -1,0 +1,30 @@
+:root {
+    --yellow-color: #FFAB08;
+    --orange-color: #FF7020;
+    --black-color: #000000;
+    --white-color: #ffffff;
+    --whiteGrey-color: #F2F2F3;
+    --grey-color: #b1b1b1;
+
+    --main-font: 'Nunito' , Arial, sans-serif;
+}
+
+[class="SIZE"] {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+[class="container"] {
+    max-width: 1290px;
+    margin: 0 auto;
+}
+
+[class="hidden"] {
+    display: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
